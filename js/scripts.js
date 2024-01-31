@@ -54,27 +54,23 @@ const sendPower = (power) => {
     (power === GAME_OPTIONS.PAPER && computer === GAME_OPTIONS.ROCK) ||
     (power === GAME_OPTIONS.SCISSOR && computer === GAME_OPTIONS.PAPER)
   ) {
-    let playerGame = power
-      .replace(GAME_OPTIONS.ROCK, "Pedra")
-      .replace(GAME_OPTIONS.PAPER, "Papel")
-      .replace(GAME_OPTIONS.SCISSOR, "Tesoura");
-
     result.innerHTML = `
     Você ganhou do computador! <br> 
-    Você: ${playerGame} <br> 
-    Computador: ${computer
-      .replace("rock", "Pedra")
-      .replace("paper", "Papel")
-      .replace("scissor", "Tesoura")}`;
-    winOrLose("win");
-  } else {
-    let playerGame = power
+    Você: ${power
       .replace(GAME_OPTIONS.ROCK, "Pedra")
       .replace(GAME_OPTIONS.PAPER, "Papel")
-      .replace(GAME_OPTIONS.SCISSOR, "Tesoura");
-
+      .replace(GAME_OPTIONS.SCISSOR, "Tesoura")} <br> 
+    Computador: ${computer
+      .replace(GAME_OPTIONS.ROCK, "Pedra")
+      .replace(GAME_OPTIONS.PAPER, "Papel")
+      .replace(GAME_OPTIONS.SCISSOR, "Tesoura")}`;
+    winOrLose("win");
+  } else {
     result.innerHTML = `Você perdeu para o computador! <br> 
-    Você: ${playerGame} <br> 
+    Você: ${power
+      .replace(GAME_OPTIONS.ROCK, "Pedra")
+      .replace(GAME_OPTIONS.PAPER, "Papel")
+      .replace(GAME_OPTIONS.SCISSOR, "Tesoura")} <br> 
     Computador: ${computer
       .replace("rock", "Pedra")
       .replace("paper", "Papel")
