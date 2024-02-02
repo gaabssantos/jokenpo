@@ -3,12 +3,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
   background-image: url("../img/bg.jpeg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
 }
 
 img {
